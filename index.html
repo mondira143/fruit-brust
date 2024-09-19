@@ -42,35 +42,41 @@
     <div
       class="navbar-start flex justify-between bg-bgnav w-screen h-24 rounded-full"
     >
-      <div class="p-8 ml-5 text-clrwhite font-bold">
-        <ul class="flex gap-6">
+      <div class="p-8 ml-5 text-clrwhite font-bold" id="menu-list">
+        <ul class="flex gap-6 sm:hidden">
           <li><a>Home</a></li>
           <li><a>About Us</a></li>
           <li><a>Shop</a></li>
           <li><a>All Fruits</a></li>
         </ul>
       </div>
+      
 
-      <div class="navbar-center flex">
-        <img class="h-20 w-20" src="images/logo.png" alt="" />
+      <div class="navbar-center flex sm:mr-0 md:mr-0 lg:mr-96">
+        <img class="h-20 w-20  " src="images/logo.png" alt="" />
         <a class="btn btn-ghost p-6 text-clrwhite text-4xl">Fruit Burst</a>
+        <div class="ml-40 mt-6 md:hidden" id="click-icon">
+          <i class="fa-solid fa-bars text-4xl "></i>
+        </div>
       </div>
       <div class="flex">
         <div class="form-control h-14 w-96 mr-2 mt-6">
           <input
             type="text"
             placeholder="Search here...."
-            class="input input-bordered rounded-3xl md:w-auto"
+            class="input input-bordered rounded-3xl sm:hidden md:w-auto md:block "
           />
         </div>
-        <div>
-          <i class="fa-solid fa-magnifying-glass mt-10 pr-10"></i>
+        <div class="pr-10">
+          <i class="fa-solid fa-magnifying-glass mt-10 pr-10 absolute right-4 sm:hidden md:block"></i>
         </div>
+        
       </div>
+      
     </div>
 
     <!-- frist page -->
-    <div class="carousel w-full pt-10 h-screen">
+    <div class="carousel w-full pt-10 h-screen sm:h-96 sm:pt-6 md:h-screen lg:h-screen">
       <!-- slider1 -->
       <div id="slide1" class="carousel-item relative w-full">
         <div class="hero" style="background-image: url(images/banner1.png)">
@@ -94,7 +100,7 @@
             <a href="#slide2" class="btn btn-circle">❯</a>
           </div>
           <div
-            class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl"
+            class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl sm:hidden md:flex md:gap-6 md:absolute md:left-32 lg:flex lg:ml-8 lg:"
           >
             <div>
               <img class="" src="images/fruit1.png" alt="" />
@@ -137,7 +143,7 @@
           </div>
 
           <div
-            class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl"
+            class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl sm:hidden md:flex md:gap-6 md:absolute md:left-32 lg:flex lg:ml-8 lg:"
           >
             <div>
               <img class="" src="images/fruit1.png" alt="" />
@@ -187,7 +193,7 @@
             </div>
 
             <div
-              class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl"
+              class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl sm:hidden md:flex md:gap-6 md:absolute md:left-32 lg:flex lg:ml-8 lg:"
             >
               <div>
                 <img class="" src="images/fruit1.png" alt="" />
@@ -241,7 +247,7 @@
             </div>
 
             <div
-              class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-10 bg-white shadow-3xl"
+              class="flex justify-center gap-14 absolute w-9/12 left-52 -bottom-4 bg-white shadow-xl sm:hidden md:flex md:gap-6 md:absolute md:left-32 lg:flex lg:ml-8 lg:"
             >
               <div>
                 <img class="" src="images/fruit1.png" alt="" />
@@ -278,17 +284,17 @@
 
     <!-- count -->
 
-    <div class="w-screen h-screen">
-      <div class="flex pt-20">
-        <div class="pl-20">
-          <h1 class="text-black font-bold text-4xl">Deal of the day</h1>
-          <p class="mt-6">
+    <div class="w-screen ">
+      <div class="flex pt-20 sm:block lg:flex lg:pt-10 ">
+        <div class="pl-20 sm:pl-0  ">
+          <h1 class="text-black font-bold text-4xl sm:pl-48 lg:pl-20 lg:ml-16 ">Deal of the day</h1>
+          <p class="mt-6 sm:w-11/12 sm:pl-36 lg:w-full ">
             Contrary to popular belief, is not simply random text. It has roots
             in a piece of classical <br />
             Latin literature from 45 BC, making it over 2000 years old.
           </p>
         </div>
-        <div class="grid auto-cols-max grid-flow-col gap-5 text-center ml-96">
+        <div class="grid auto-cols-max grid-flow-col gap-5 text-center ml-96 sm:ml-44 sm:mt-6 lg:ml-80">
           <div class="flex flex-col">
             <span class="countdown font-mono text-5xl font-bold">
               <span style="--value: 29"></span>
@@ -305,17 +311,18 @@
             <span class="countdown font-mono text-5xl font-bold">
               <span style="--value: 25"></span>
             </span>
-            min
+            minutes
           </div>
           <div class="flex flex-col">
             <span class="countdown font-mono text-5xl font-bold">
               <span style="--value: 08"></span>
             </span>
-            sec
+            seconds
           </div>
         </div>
       </div>
-      <div class="flex pl-24 pt-16 gap-10">
+      <!-- card -->
+      <div class="flex pl-24 pt-16 gap-10 sm:block sm:pl-48 lg:flex lg:pl-24 ">
         <div class="card bg-base-100 w-72 shadow-xl">
           <figure class="px-6 pt-10">
             <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
@@ -387,14 +394,14 @@
               <i class="fa-solid fa-star text-bgnav"></i>
               <i class="fa-solid fa-star text-bgnav"></i>
             </div>
-            <div class="card-actions">
-              <button class="text-bgnav">Details</button>
+            <div class="card-actions ">
+              <button class="text-bgnav ">Details</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="pl-72 pt-10">
-        <button class="btn bg-bgnav text-clrwhite ml-96">Shop All</button>
+      <div class="pl-72 pt-10 ">
+        <button class="btn bg-bgnav text-clrwhite lg:ml-96">Shop All</button>
       </div>
     </div>
 
@@ -404,12 +411,11 @@
       class="hero min-h-screen"
       style="background-image: url(images/banner1.png)"
     >
-      <div class="hero-overlay bg-opacity-70"></div>
-      <div class="hero-content text-neutral-content text-center pb-64">
-        <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">
-            Meet the team <br />
-            section
+      <div class="hero-overlay bg-opacity-70 sm:bg-opacity-80 lg:bg-opacity-70"></div>
+      <div class="hero-content text-neutral-content text-center pb-64 sm:pb-96 lg:pb-64">
+        <div class="max-w-md sm:pb-96 sm:mb-32 lg:pb-0 ">
+          <h1 class="mb-5 text-5xl font-bold sm:text-3xl lg:text-5xl">
+            Meet the team section
           </h1>
           <p>
             Contrary to popular belief, is not simply random text. It has roots
@@ -419,10 +425,10 @@
         </div>
       </div>
 
-      <div class="flex space-x-32 pt-40">
+      <div class="flex space-x-32 pt-40 sm:block sm:space-x-3 lg:flex lg:space-x-32 ">
         <div>
           <img src="images/member1.png" alt="" />
-          <h2 class="font-bold text-clrwhite font-2xl ml-4">Awlad Hossain</h2>
+          <h2 class="font-bold text-clrwhite font-4xl ml-4">Awlad Hossain</h2>
           <p class="text-clrwhite ml-8">Fruits Expert</p>
 
           <div class="ml-8 space-x-2">
@@ -433,7 +439,7 @@
         </div>
         <div>
           <img src="images/member2.png" alt="" />
-          <h2 class="font-bold text-clrwhite font-2xl ml-4">Awlad Hossain</h2>
+          <h2 class="font-bold text-clrwhite font-4xl ml-2">Safia Chowdhury          </h2>
           <p class="text-clrwhite ml-8">Fruits Expert</p>
           <div class="ml-8 space-x-2">
             <i class="fa-brands fa-facebook text-bgnav bg-clrwhite"></i>
@@ -443,7 +449,7 @@
         </div>
         <div>
           <img src="images/member3.png" alt="" />
-          <h2 class="font-bold text-clrwhite font-2xl ml-4">Awlad Hossain</h2>
+          <h2 class="font-bold text-clrwhite font-4xl ml-4">Rokib Hossain          </h2>
           <p class="text-clrwhite ml-8">Fruits Expert</p>
           <div class="ml-8 space-x-2">
             <i class="fa-brands fa-facebook text-bgnav bg-clrwhite"></i>
@@ -453,7 +459,7 @@
         </div>
         <div>
           <img src="images/member4.png" alt="" />
-          <h2 class="font-bold text-clrwhite font-2xl ml-4">Awlad Hossain</h2>
+          <h2 class="font-bold text-clrwhite font-4xl ml-10">Chaity</h2>
           <p class="text-clrwhite ml-8">Fruits Expert</p>
           <div class="ml-8 space-x-2">
             <i class="fa-brands fa-facebook text-bgnav bg-clrwhite"></i>
@@ -466,17 +472,17 @@
 
     <!-- lastpage -->
 
-    <div class="h-screen w-screen bg-white">
-      <div class="pl-96 mt-10 ">
-        <h1 class="font-bold text-4xl ml-40">Why Choose Us</h1>
-        <p class="mt-6">
+    <div class=" w-screen bg-white">
+      <div class=" ml-16 mt-10 sm:pl-8 lg:pl-96 ">
+        <h1 class="font-bold text-4xl ml-40 sm:text-3xl sm:ml-20 lg:ml-40 lg:4xl">Why Choose Us</h1>
+        <p class="mt-6 sm:w-96 sm:ml-12  lg:ml-0 lg:w-auto">
           Contrary to popular belief, is not simply random text. It has roots in
           a piece of classical</p>
-          <p class="ml-32">Latin literature from 45 BC, making it over 2000 years old</p>
+          <p class="ml-32 sm:ml-14 lg:ml-32 ">Latin literature from 45 BC, making it over 2000 years old</p>
       </div>
-      <div class="flex items-center space-x-16 p-20 ">
+      <div class="flex items-center space-x-16 p-20 sm:block lg:flex sm:p-8  ">
         <!-- right -->
-        <div class="space-y-20">
+        <div class="space-y-20 sm:ml-28 lg:ml-0 sm:space-y-6 lg:space-y-20 ">
           <div class="flex">
             <div class="bg-gray-300 rounded-2xl h-7 w-6 text-center">
               <i class="fa-solid fa-users text-xl"></i>            </div>
@@ -518,11 +524,11 @@
           <img src="images/whychoose1.png" alt="">
         </div>
         <!-- left -->
-        <div class="space-y-16">
+        <div class="space-y-16 sm:space-y-7 lg:space-y-16">
          
             <div class="flex">
               <div>
-                <h1 class="font-bold text-xl ml-36 ">Integrated Supplier            </h1>
+                <h1 class="font-bold text-xl ml-36 ">Integrated Supplier  </h1>
                 <p>Professional employees are there for you to pick</p>
                 <p class="ml-24">the most amazing and fresh fruits.</p>
                   
@@ -588,5 +594,14 @@
       </div>
       
      </div>
+
+     <!-- this is jvs link -->
+     <script>
+      document.getElementById("click-icon").addEventListener("click", function () {
+      const menuList = document.getElementById("menu-list");
+      menuList.classList.toggle("show");
+      });
+  
+    </script>
   </body>
 </html>
